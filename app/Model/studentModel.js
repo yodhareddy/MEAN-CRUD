@@ -1,3 +1,4 @@
+//studentrecords collection in test1 database
 var mongoose = require('mongoose');
     //Define Model and studentrecords will be the name of the Collection (Export)
 module.exports = mongoose.model('studentrecords',{
