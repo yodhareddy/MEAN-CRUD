@@ -1,0 +1,30 @@
+<html ng-app = "myapp">
+
+<head>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
+     <script src="core.js"></script>
+</head>
+
+<body ng-controller = "mycont">
+
+<h1>Students List</h1>
+<h3>click on checkbox to delete a student</h3>
+<div ng-repeat = "student in students">
+<input type = "checkbox" ng-click= "deleteStudent(student._id)">{{student.lastName}},{{student.firstName}}
+</div>
+
+<div>
+<form>
+<h3>Add Student</h3>
+LastName:<input type="text" ng-model ="formData.lastName">
+FirstName:<input type="text" ng-model ="formData.firstName">
+<input type="submit" ng-click="createStudent()">
+
+</form>
+
+</div>
+
+
+</body>
+</html>
